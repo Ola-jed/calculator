@@ -10,7 +10,7 @@ class CalculatorBtn extends StatelessWidget {
   CalculatorBtn({
     required this.label,
     required this.onTap,
-    this.backgroundColor = Colors.black87,
+    this.backgroundColor = Colors.teal,
     this.labelColor = Colors.white,
     this.size = 80.0
   });
