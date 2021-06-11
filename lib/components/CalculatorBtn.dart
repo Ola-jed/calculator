@@ -10,7 +10,7 @@ class CalculatorBtn extends StatelessWidget {
   CalculatorBtn({
     required this.label,
     required this.onTap,
-    this.backgroundColor = Colors.teal,
+    this.backgroundColor = Colors.black87,
     this.labelColor = Colors.white,
     this.size = 80.0
   });
@@ -25,7 +25,7 @@ class CalculatorBtn extends StatelessWidget {
           decoration: BoxDecoration(
               boxShadow: [
                 BoxShadow(
-                    color: Colors.grey,
+                    color: Colors.blueGrey,
                     offset: Offset(1, 1),
                     blurRadius: 2
                 ),

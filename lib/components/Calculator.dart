@@ -10,7 +10,8 @@ class Calculator extends StatefulWidget {
 }
 
 class _CalculatorState extends State<Calculator> {
-  final _operationColor = Colors.black38;
+  final _operationColor = Colors.black12;
+  final _operationFontColor = Colors.blue;
   final _equalsColor = Colors.lightBlue;
   StringBuffer _calculationBuffer = StringBuffer();
   String get calculationBufferContent => _calculationBuffer.isEmpty ? '0' : _calculationBuffer.toString();
@@ -66,7 +67,7 @@ class _CalculatorState extends State<Calculator> {
             Expanded(child: CalculatorBtn(label: '7', onTap: () => onButton('7'))),
             Expanded(child: CalculatorBtn(label: '8', onTap: () => onButton('8'))),
             Expanded(child: CalculatorBtn(label: '9', onTap: () => onButton('9'))),
-            Expanded(child: CalculatorBtn(label: '*', onTap: () => onButton('*'),backgroundColor: _operationColor)),
+            Expanded(child: CalculatorBtn(label: '*', onTap: () => onButton('*'),backgroundColor: _operationColor,labelColor: _operationFontColor)),
           ]
         ),
         Row(
@@ -74,7 +75,7 @@ class _CalculatorState extends State<Calculator> {
             Expanded(child: CalculatorBtn(label: '4', onTap: () => onButton('4'))),
             Expanded(child: CalculatorBtn(label: '5', onTap: () => onButton('5'))),
             Expanded(child: CalculatorBtn(label: '6', onTap: () => onButton('6'))),
-            Expanded(child: CalculatorBtn(label: '/', onTap: () => onButton('/'),backgroundColor: _operationColor))
+            Expanded(child: CalculatorBtn(label: '/', onTap: () => onButton('/'),backgroundColor: _operationColor,labelColor: _operationFontColor))
           ]
         ),
         Row(
@@ -82,7 +83,7 @@ class _CalculatorState extends State<Calculator> {
             Expanded(child: CalculatorBtn(label: '1', onTap: () => onButton('1'))),
             Expanded(child: CalculatorBtn(label: '2', onTap: () => onButton('2'))),
             Expanded(child: CalculatorBtn(label: '3', onTap: () => onButton('3'))),
-            Expanded(child: CalculatorBtn(label: '+', onTap: () => onButton('+'),backgroundColor: _operationColor))
+            Expanded(child: CalculatorBtn(label: '+', onTap: () => onButton('+'),backgroundColor: _operationColor,labelColor: _operationFontColor))
           ]
         ),
         Row(
@@ -90,23 +91,23 @@ class _CalculatorState extends State<Calculator> {
             Expanded(child: CalculatorBtn(label: '0', onTap: () => onButton('0'))),
             Expanded(child: CalculatorBtn(label: '.', onTap: () => onButton('.'))),
             Expanded(child: CalculatorBtn(label: '%', onTap: () => onButton('%'))),
-            Expanded(child: CalculatorBtn(label: '-', onTap: () => onButton('-'),backgroundColor: _operationColor))
+            Expanded(child: CalculatorBtn(label: '-', onTap: () => onButton('-'),backgroundColor: _operationColor,labelColor: _operationFontColor))
           ]
         ),
         Row(
           children: <Widget>[
-            Expanded(child: CalculatorBtn(label: 'ln', onTap: () => onButton('ln'),backgroundColor: _operationColor)),
-            Expanded(child: CalculatorBtn(label: 'e', onTap: () => onButton('e'),backgroundColor: _operationColor)),
-            Expanded(child: CalculatorBtn(label: 'sqrt', onTap: () => onButton('sqrt'),backgroundColor: _operationColor)),
-            Expanded(child: CalculatorBtn(label: 'sin', onTap: () => onButton('sin'),backgroundColor: _operationColor)),
+            Expanded(child: CalculatorBtn(label: 'ln', onTap: () => onButton('ln'),backgroundColor: _operationColor,labelColor: _operationFontColor)),
+            Expanded(child: CalculatorBtn(label: 'e', onTap: () => onButton('e'),backgroundColor: _operationColor,labelColor: _operationFontColor)),
+            Expanded(child: CalculatorBtn(label: 'sqrt', onTap: () => onButton('sqrt'),backgroundColor: _operationColor,labelColor: _operationFontColor)),
+            Expanded(child: CalculatorBtn(label: 'sin', onTap: () => onButton('sin'),backgroundColor: _operationColor,labelColor: _operationFontColor)),
           ]
         ),
         Row(
           children: <Widget>[
-            Expanded(child: CalculatorBtn(label: 'cos', onTap: () => onButton('cos'),backgroundColor: _operationColor)),
-            Expanded(child: CalculatorBtn(label: 'tan', onTap: () => onButton('tan'),backgroundColor: _operationColor)),
-            Expanded(child: CalculatorBtn(label: 'C', onTap: () => onClear(),backgroundColor: _operationColor)),
-            Expanded(child: CalculatorBtn(label: '<-', onTap: () => onErase(),backgroundColor: _operationColor))
+            Expanded(child: CalculatorBtn(label: 'cos', onTap: () => onButton('cos'),backgroundColor: _operationColor,labelColor: _operationFontColor)),
+            Expanded(child: CalculatorBtn(label: 'tan', onTap: () => onButton('tan'),backgroundColor: _operationColor,labelColor: _operationFontColor)),
+            Expanded(child: CalculatorBtn(label: 'C', onTap: () => onClear(),backgroundColor: _operationColor,labelColor: _operationFontColor)),
+            Expanded(child: CalculatorBtn(label: '<-', onTap: () => onErase(),backgroundColor: _operationColor,labelColor: _operationFontColor))
           ]
         ),
         Row(

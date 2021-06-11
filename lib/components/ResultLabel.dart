@@ -3,8 +3,7 @@ import 'package:flutter/rendering.dart';
 
 class ResultLabel extends StatelessWidget {
   String text = '';
-  double result;
-  ResultLabel({Key? key,this.text = '', this.result = 0}) : super(key: key);
+  ResultLabel({Key? key,this.text = ''}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
