@@ -13,3 +13,7 @@ flutter run
 # Or if you want to build the apk
 flutter build apk --release
 ```
+
+## Preview
+
+![IMG_wlvfzv](https://user-images.githubusercontent.com/66482155/121713749-14c17680-cad5-11eb-9e7d-970de3afdad6.gif)
