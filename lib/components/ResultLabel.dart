@@ -3,7 +3,8 @@ import 'package:flutter/rendering.dart';
 
 class ResultLabel extends StatelessWidget {
   String text = '';
-  ResultLabel({Key? key,this.text = ''}) : super(key: key);
+  Color textColor;
+  ResultLabel({Key? key,this.text = '',this.textColor = Colors.white}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -16,7 +17,7 @@ class ResultLabel extends StatelessWidget {
       child: Text(
         text,
         style: TextStyle(
-          color: Colors.white,
+          color: textColor,
           fontSize: 27
         )
       ),

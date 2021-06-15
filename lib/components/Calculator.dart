@@ -12,6 +12,7 @@ class Calculator extends StatefulWidget {
 class _CalculatorState extends State<Calculator> {
   final _operationColor = Colors.black12;
   final _equalsColor = Colors.blue;
+  var _isErr = false;
   StringBuffer _calculationBuffer = StringBuffer();
   String get calculationBufferContent => _calculationBuffer.isEmpty ? '0' : _calculationBuffer.toString();
 
@@ -23,6 +24,7 @@ class _CalculatorState extends State<Calculator> {
 
   void onClear() {
     setState(() {
+      _isErr = false;
       _calculationBuffer.clear();
     });
   }
@@ -35,10 +37,12 @@ class _CalculatorState extends State<Calculator> {
         var p = Parser();
         var exp =  p.parse(_calculationBuffer.toString());
         ans = exp.evaluate(EvaluationType.REAL,ContextModel()).toString();
+        _isErr = false;
       }
       on Exception
       {
         ans = 'Error';
+        _isErr = true;
       }
       _calculationBuffer.clear();
       _calculationBuffer.write(ans);
@@ -59,7 +63,8 @@ class _CalculatorState extends State<Calculator> {
     return ListView(
       children: <Widget>[
         ResultLabel(
-          text: calculationBufferContent
+          text: calculationBufferContent,
+          textColor: _isErr ? Colors.red : Colors.white
         ),
         Row(
           children: <Widget>[
