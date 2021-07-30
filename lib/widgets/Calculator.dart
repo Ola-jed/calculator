@@ -1,6 +1,6 @@
 import 'package:math_expressions/math_expressions.dart';
-import 'package:calculator/components/CalculatorBtn.dart';
-import 'package:calculator/components/ResultLabel.dart';
+import 'package:calculator/widgets/CalculatorBtn.dart';
+import 'package:calculator/widgets/ResultLabel.dart';
 import 'package:flutter/material.dart';
 
 class Calculator extends StatefulWidget {

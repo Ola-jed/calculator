@@ -2,15 +2,16 @@ import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 
 class ResultLabel extends StatelessWidget {
-  String text = '';
-  Color textColor;
-  ResultLabel({Key? key,this.text = '',this.textColor = Colors.white}) : super(key: key);
+  final text;
+  final textColor;
+  ResultLabel({Key? key, this.text = '', this.textColor = Colors.white})
+      : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return Container(
       alignment: Alignment.centerRight,
-      padding: EdgeInsets.only(right: 24,bottom: 10,top: 35),
+      padding: EdgeInsets.only(right: 24, bottom: 10, top: 35),
       width: double.infinity,
       height: 140,
       color: Colors.black,
@@ -18,8 +19,8 @@ class ResultLabel extends StatelessWidget {
         text,
         style: TextStyle(
           color: textColor,
-          fontSize: 27
-        )
+          fontSize: 27,
+        ),
       ),
     );
   }
